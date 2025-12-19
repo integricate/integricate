@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Integricate Documentation - Complete guides, API references, and tutorials for UAS programming">
+    <title>Documentation | Integricate - UAS Programming Platform</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚁</text></svg>">
+</head>
+<body class="docs-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="10" cy="10" r="4" fill="currentColor"/>
+                        <circle cx="30" cy="10" r="4" fill="currentColor"/>
+                        <circle cx="10" cy="30" r="4" fill="currentColor"/>
+                        <circle cx="30" cy="30" r="4" fill="currentColor"/>
+                        <rect x="16" y="16" width="8" height="8" rx="2" fill="currentColor"/>
+                        <line x1="14" y1="14" x2="16" y2="16" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="26" y1="14" x2="24" y2="16" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="14" y1="26" x2="16" y2="24" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="26" y1="26" x2="24" y2="24" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Integricate</span>
+                </a>
+            </div>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link active">Docs</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="#" class="nav-link">Community</a>
+            </div>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    <input type="text" placeholder="Search docs..." id="docsSearch">
+                    <kbd>⌘K</kbd>
+                </div>
+                <a href="#" class="btn btn-primary">Get API Key</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Getting Started</h3>
+                    <ul>
+                        <li><a href="#introduction" class="active">Introduction</a></li>
+                        <li><a href="#quick-start">Quick Start Guide</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                        <li><a href="#authentication">Authentication</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Core Concepts</h3>
+                    <ul>
+                        <li><a href="#drone-connection">Drone Connection</a></li>
+                        <li><a href="#flight-modes">Flight Modes</a></li>
+                        <li><a href="#mission-planning">Mission Planning</a></li>
+                        <li><a href="#telemetry">Telemetry Data</a></li>
+                        <li><a href="#geofencing">Geofencing</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>API Reference</h3>
+                    <ul>
+                        <li><a href="#api-overview">API Overview</a></li>
+                        <li><a href="#drone-api">Drone API</a></li>
+                        <li><a href="#mission-api">Mission API</a></li>
+                        <li><a href="#telemetry-api">Telemetry API</a></li>
+                        <li><a href="#payload-api">Payload API</a></li>
+                        <li><a href="#events-api">Events & Webhooks</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>SDKs</h3>
+                    <ul>
+                        <li><a href="#python-sdk">Python SDK</a></li>
+                        <li><a href="#cpp-sdk">C++ SDK</a></li>
+                        <li><a href="#ros-sdk">ROS Integration</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Guides</h3>
+                    <ul>
+                        <li><a href="#autonomous-missions">Autonomous Missions</a></li>
+                        <li><a href="#computer-vision">Computer Vision</a></li>
+                        <li><a href="#fleet-management">Fleet Management</a></li>
+                        <li><a href="#simulation">SITL Simulation</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-main">
+            <div class="docs-content">
+                <!-- Introduction -->
+                <section id="introduction" class="docs-section">
+                    <div class="section-header-docs">
+                        <span class="section-category">Getting Started</span>
+                        <h1>Introduction to Integricate</h1>
+                        <p class="section-lead">Integricate is a comprehensive UAS (Unmanned Aerial Systems) programming platform that enables developers to build, test, and deploy autonomous drone applications with ease.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">💡</div>
+                        <div class="info-content">
+                            <strong>New to Integricate?</strong>
+                            <p>Check out our <a href="#quick-start">Quick Start Guide</a> to get your first drone flying in under 5 minutes.</p>
+                        </div>
+                    </div>
+
+                    <h2>What is Integricate?</h2>
+                    <p>Integricate provides a unified API for controlling drones, managing missions, processing telemetry data, and integrating computer vision capabilities. Whether you're building a single drone application or managing a fleet of hundreds, Integricate scales with your needs.</p>
+
+                    <h3>Key Features</h3>
+                    <div class="feature-grid-docs">
+                        <div class="feature-item-docs">
+                            <div class="feature-icon-docs">🎮</div>
+                            <h4>Flight Control</h4>
+                            <p>Direct control over flight controllers with sub-millisecond latency</p>
+                        </div>
+                        <div class="feature-item-docs">
+                            <div class="feature-icon-docs">📍</div>
+                            <h4>Mission Planning</h4>
+                            <p>Visual and programmatic mission design with waypoint management</p>
+                        </div>
+                        <div class="feature-item-docs">
+                            <div class="feature-icon-docs">📊</div>
+                            <h4>Telemetry</h4>
+                            <p>Real-time sensor data streaming and analytics</p>
+                        </div>
+                        <div class="feature-item-docs">
+                            <div class="feature-icon-docs">👁️</div>
+                            <h4>Computer Vision</h4>
+                            <p>Object detection, tracking, and visual navigation</p>
+                        </div>
+                    </div>
+
+                    <h3>Supported Platforms</h3>
+                    <p>Integricate works with a wide range of flight controllers and drone platforms:</p>
+                    <ul class="check-list">
+                        <li><strong>ArduPilot</strong> - Full MAVLink 2.0 support</li>
+                        <li><strong>PX4</strong> - Native integration via uORB</li>
+                        <li><strong>DJI</strong> - SDK integration for enterprise drones</li>
+                        <li><strong>Custom FC</strong> - Generic MAVLink support</li>
+                    </ul>
+                </section>
+
+                <!-- Quick Start -->
+                <section id="quick-start" class="docs-section">
+                    <div class="section-header-docs">
+                        <span class="section-category">Getting Started</span>
+                        <h1>Quick Start Guide</h1>
+                        <p class="section-lead">Get your first drone flying with Integricate in under 5 minutes.</p>
+                    </div>
+
+                    <h2>Prerequisites</h2>
+                    <ul class="check-list">
+                        <li>Python 3.8+ or C++17</li>
+                        <li>A MAVLink-compatible drone or SITL simulator</li>
+                        <li>An Integricate API key (<a href="#">Get one free</a>)</li>
+                    </ul>
+
+                    <h2>Step 1: Install the SDK</h2>
+                    <div class="code-block-docs">
+                        <div class="code-header">
+                            <span class="code-lang">bash</span>
+                            <button class="copy-code-btn" data-code="pip install integricate">Copy</button>
+                        </div>
+                        <pre><code class="language-bash"><span class="comment"># Install the Python SDK</span>
+pip install integricate
+
+<span class="comment"># Or install with extras for computer vision</span>
+pip install integricate[vision]</code></pre>
+                    </div>
+
+                    <h2>Step 2: Configure Authentication</h2>
+                    <p>Set your API key as an environment variable:</p>
+                    <div class="code-block-docs">
+                        <div class="code-header">
+                            <span class="code-lang">bash</span>
+                            <button class="copy-code-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-bash">export INTEGRICATE_API_KEY="your-api-key-here"</code></pre>
+                    </div>
+
+                    <h2>Step 3: Connect to Your Drone</h2>
+                    <div class="code-block-docs">
+                        <div class="code-header">
+                            <span class="code-lang">python</span>
+                            <button class="copy-code-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-python"><span class="keyword">from</span> integricate <span class="keyword">import</span> Drone
+
+<span class="comment"># Auto-detect and connect to your drone</span>
+drone = Drone.connect(<span class="string">"auto"</span>)
+
+<span class="comment"># Or specify connection explicitly</span>
+drone = Drone.connect(<span class="string">"serial:///dev/ttyUSB0:57600"</span>)
+drone = Drone.connect(<span class="string">"udp://:14540"</span>)  <span class="comment"># For SITL</span>
+
+<span class="comment"># Check connection status</span>
+<span class="builtin">print</span>(<span class="string">f"Connected to: <span class="interp">{drone.system_id}</span>"</span>)
+<span class="builtin">print</span>(<span class="string">f"Firmware: <span class="interp">{drone.firmware_version}</span>"</span>)</code></pre>
+                    </div>
+
+                    <h2>Step 4: Take Off!</h2>
+                    <div class="code-block-docs">
+                        <div class="code-header">
+                            <span class="code-lang">python</span>
+                            <button class="copy-code-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-python"><span class="keyword">import</span> asyncio
+<span class="keyword">from</span> integricate <span class="keyword">import</span> Drone
+
+<span class="keyword">async def</span> <span class="function">main</span>():
+    <span class="comment"># Connect to drone</span>
+    drone = Drone.connect(<span class="string">"auto"</span>)
+
+    <span class="comment"># Pre-flight checks</span>
+    <span class="keyword">if not</span> drone.is_ready:
+        <span class="builtin">print</span>(<span class="string">"Drone not ready. Check:"</span>)
+        <span class="builtin">print</span>(drone.preflight_status)
+        <span class="keyword">return</span>
+
+    <span class="comment"># Arm and takeoff</span>
+    <span class="keyword">await</span> drone.arm()
+    <span class="keyword">await</span> drone.takeoff(altitude=<span class="number">10</span>)  <span class="comment"># 10 meters</span>
+
+    <span class="comment"># Hover for 5 seconds</span>
+    <span class="keyword">await</span> asyncio.sleep(<span class="number">5</span>)
+
+    <span class="comment"># Land safely</span>
+    <span class="keyword">await</span> drone.land()
+
+    <span class="builtin">print</span>(<span class="string">"Mission complete!"</span>)
+
+asyncio.run(main())</code></pre>
+                    </div>
+
+                    <div class="warning-card">
+                        <div class="warning-icon">⚠️</div>
+                        <div class="warning-content">
+                            <strong>Safety First!</strong>
+                            <p>Always test new code in simulation (SITL) before flying a real drone. Ensure you have a clear flight area and follow local regulations.</p>
+                        </div>
+                    </div>
+
+                    <h2>Next Steps</h2>
+                    <div class="next-steps-grid">
+                        <a href="#mission-planning" class="next-step-card">
+                            <div class="step-icon">📍</div>
+                            <div class="step-content">
+                                <h4>Mission Planning</h4>
+                                <p>Learn to create complex autonomous missions</p>
+                            </div>
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#telemetry" class="next-step-card">
+                            <div class="step-icon">📊</div>
+                            <div class="step-content">
+                                <h4>Telemetry</h4>
+                                <p>Stream and process real-time sensor data</p>
+                            </div>
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#simulation" class="next-step-card">
+                            <div class="step-icon">🎮</div>
+                            <div class="step-content">
+                                <h4>Simulation</h4>
+                                <p>Test safely with our SITL simulator</p>
+                            </div>
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Installation -->
+                <section id="installation" class="docs-section">
+                    <div class="section-header-docs">
+                        <span class="section-category">Getting Started</span>
+                        <h1>Installation</h1>
+                        <p class="section-lead">Detailed installation instructions for all supported platforms and languages.</p>
+                    </div>
+
+                    <div class="tabs-container">
+                        <div class="tabs-header">
+                            <button class="tab-btn active" data-tab="python-install">Python</button>
+                            <button class="tab-btn" data-tab="cpp-install">C++</button>
+                            <button class="tab-btn" data-tab="ros-install">ROS 2</button>
+                        </div>
+
+                        <div class="tab-content active" id="python-install">
+                            <h3>Python SDK Installation</h3>
+                            <p>The Python SDK requires Python 3.8 or later.</p>
+
+                            <h4>Using pip (Recommended)</h4>
+                            <div class="code-block-docs">
+                                <div class="code-header">
+                                    <span class="code-lang">bash</span>
+                                    <button class="copy-code-btn">Copy</button>
+                                </div>
+                                <pre><code class="language-bash"><span class="comment"># Basic installation</span>
+pip install integricate
+
+<span class="comment"># With computer vision support</span>
+pip install integricate[vision]
+
+<span class="comment"># With all optional dependencies</span>
+pip install integricate[all]</code></pre>
+                            </div>
+
+                            <h4>From Source</h4>
+                            <div class="code-block-docs">
+                                <div class="code-header">
+                                    <span class="code-lang">bash</span>
+                                    <button class="copy-code-btn">Copy</button>
+                                </div>
+                                <pre><code class="language-bash">git clone https://github.com/integricate/integricate-python.git
+cd integricate-python
+pip install -e .</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="cpp-install">
+                            <h3>C++ SDK Installation</h3>
+                            <p>The C++ SDK requires C++17 and CMake 3.16+.</p>
+
+                            <h4>Using CMake</h4>
+                            <div class="code-block-docs">
+                                <div class="code-header">
+                                    <span class="code-lang">cmake</span>
+                                    <button class="copy-code-btn">Copy</button>
+                                </div>
+                                <pre><code class="language-cmake">include(FetchContent)
+FetchContent_Declare(
+  integricate
+  GIT_REPOSITORY https://github.com/integricate/integricate-cpp.git
+  GIT_TAG v3.0.0
+)
+FetchContent_MakeAvailable(integricate)
+
+target_link_libraries(your_target PRIVATE integricate::integricate)</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="ros-install">
+                            <h3>ROS 2 Integration</h3>
+                            <p>The ROS 2 package works with Humble and Iron.</p>
+
+                            <h4>Using rosdep</h4>
+                            <div class="code-block-docs">
+                                <div class="code-header">
+                                    <span class="code-lang">bash</span>
+                                    <button class="copy-code-btn">Copy</button>
+                                </div>
+                                <pre><code class="language-bash"><span class="comment"># Add to your workspace src folder</span>
+cd ~/ros2_ws/src
+git clone https://github.com/integricate/integricate_ros.git
+
+<span class="comment"># Install dependencies</span>
+rosdep install --from-paths src --ignore-src -r -y
+
+<span class="comment"># Build</span>
+cd ~/ros2_ws
+colcon build --packages-select integricate_ros</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Drone API Reference -->
+                <section id="drone-api" class="docs-section">
+                    <div class="section-header-docs">
+                        <span class="section-category">API Reference</span>
+                        <h1>Drone API</h1>
+                        <p class="section-lead">Core API endpoints for drone control and status.</p>
+                    </div>
+
+                    <h2>Endpoints</h2>
+
+                    <div class="api-endpoint">
+                        <div class="endpoint-header">
+                            <span class="method post">POST</span>
+                            <span class="endpoint-path">/api/v1/drone/arm</span>
+                        </div>
+                        <p class="endpoint-desc">Arm the drone motors. Requires safety checks to pass.</p>
+
+                        <h4>Request Body</h4>
+                        <div class="code-block-docs">
+                            <pre><code>{
+  "drone_id": "drone-alpha-01",
+  "force": false
+}</code></pre>
+                        </div>
+
+                        <h4>Response</h4>
+                        <div class="code-block-docs">
+                            <pre><code>{
+  "success": true,
+  "drone_id": "drone-alpha-01",
+  "armed": true,
+  "timestamp": "2024-01-15T14:32:18Z"
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="api-endpoint">
+                        <div class="endpoint-header">
+                            <span class="method post">POST</span>
+                            <span class="endpoint-path">/api/v1/drone/takeoff</span>
+                        </div>
+                        <p class="endpoint-desc">Command the drone to take off to a specified altitude.</p>
+
+                        <h4>Request Body</h4>
+                        <div class="code-block-docs">
+                            <pre><code>{
+  "drone_id": "drone-alpha-01",
+  "altitude": 30,
+  "speed": 5,
+  "heading": null
+}</code></pre>
+                        </div>
+
+                        <h4>Parameters</h4>
+                        <table class="params-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Type</th>
+                                    <th>Required</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>drone_id</code></td>
+                                    <td>string</td>
+                                    <td>Yes</td>
+                                    <td>Unique identifier of the drone</td>
+                                </tr>
+                                <tr>
+                                    <td><code>altitude</code></td>
+                                    <td>number</td>
+                                    <td>Yes</td>
+                                    <td>Target altitude in meters (AGL)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>speed</code></td>
+                                    <td>number</td>
+                                    <td>No</td>
+                                    <td>Climb rate in m/s (default: 3)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>heading</code></td>
+                                    <td>number</td>
+                                    <td>No</td>
+                                    <td>Target heading in degrees (null = maintain current)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="api-endpoint">
+                        <div class="endpoint-header">
+                            <span class="method get">GET</span>
+                            <span class="endpoint-path">/api/v1/drone/telemetry</span>
+                        </div>
+                        <p class="endpoint-desc">Get real-time telemetry data from the drone.</p>
+
+                        <h4>Query Parameters</h4>
+                        <table class="params-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Type</th>
+                                    <th>Required</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>drone_id</code></td>
+                                    <td>string</td>
+                                    <td>Yes</td>
+                                    <td>Unique identifier of the drone</td>
+                                </tr>
+                                <tr>
+                                    <td><code>include</code></td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Comma-separated list: gps, battery, imu, attitude</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>Response</h4>
+                        <div class="code-block-docs">
+                            <pre><code>{
+  "drone_id": "drone-alpha-01",
+  "timestamp": "2024-01-15T14:32:18Z",
+  "gps": {
+    "latitude": 47.3977,
+    "longitude": 8.5456,
+    "altitude": 45.2,
+    "satellites": 14,
+    "fix_type": "3D"
+  },
+  "battery": {
+    "voltage": 22.4,
+    "current": 12.8,
+    "remaining": 78,
+    "temperature": 32
+  },
+  "attitude": {
+    "roll": 0.5,
+    "pitch": -1.2,
+    "yaw": 142.8
+  },
+  "velocity": {
+    "vx": 2.3,
+    "vy": 0.1,
+    "vz": -0.5
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <div class="docs-footer">
+                    <div class="footer-nav">
+                        <a href="#" class="footer-nav-link prev">
+                            <svg viewBox="0 0 24 24"><path d="M19 12H5m7-7l-7 7 7 7"/></svg>
+                            <div>
+                                <span class="label">Previous</span>
+                                <span class="title">Home</span>
+                            </div>
+                        </a>
+                        <a href="#installation" class="footer-nav-link next">
+                            <div>
+                                <span class="label">Next</span>
+                                <span class="title">Installation</span>
+                            </div>
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                    <div class="footer-meta-docs">
+                        <p>Was this page helpful?</p>
+                        <div class="feedback-buttons">
+                            <button class="feedback-btn">👍 Yes</button>
+                            <button class="feedback-btn">👎 No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table of Contents -->
+            <aside class="docs-toc">
+                <h4>On this page</h4>
+                <ul id="tocList">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#quick-start">Quick Start</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#drone-api">Drone API</a></li>
+                </ul>
+            </aside>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/docs.js"></script>
+</body>
+</html>
