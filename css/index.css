@@ -1,0 +1,48 @@
+* {
+    margin: 0%;
+}
+
+.navigation {
+    position: relative;   /* VERY IMPORTANT */
+    background: #db8c41;
+    padding-top: 0%;
+}
+
+.firstnavigation {
+    position: relative;
+    z-index: 2;           /* stays ABOVE wave */
+    color: white;
+    padding: 0%;
+}
+
+.manu {
+    display: flex;
+}
+
+.first-manu {
+    height: 80px;
+    width: 80px;    
+    background-image: url('../images/integricate-icon.svg');
+    background-size: cover
+}
+
+
+
+
+
+.custom-shape-divider-top-1770199586 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;           /* stays BELOW content */
+}
+
+.custom-shape-divider-top-1770199586 svg {
+    height: 80px;
+    width: 100%;
+}
+
+.shape-fill {
+    fill: #db8c41;
+}
