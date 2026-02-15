@@ -1,0 +1,133 @@
+{
+  "brand_identity": {
+    "name": "Integricate",
+    "core_values": ["Aerial Automation", "Open Source", "Speed", "Precision"],
+    "personality": "Cyber-Industrial, Retro-Future, High-Performance",
+    "theme_mode": "dark"
+  },
+  "typography": {
+    "primary_font": {
+      "name": "Arial",
+      "usage": "Body text, navigation, section headers (except Home)",
+      "fallback": "sans-serif"
+    },
+    "accent_font": {
+      "name": "ByteBounce",
+      "usage": "Home Page Welcome Text ONLY",
+      "import_url": "https://fonts.cdnfonts.com/css/bytebounce",
+      "css_rule": "font-family: 'ByteBounce', sans-serif;"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": "#FF5500",
+      "primary_foreground": "#FFFFFF",
+      "background": "#050505",
+      "background_secondary": "#111111",
+      "text_main": "#FFFFFF",
+      "text_muted": "#A1A1AA",
+      "border": "#27272A",
+      "accent_glow": "rgba(255, 85, 0, 0.3)"
+    },
+    "usage_rules": {
+      "background": "Use #050505 for main page background to save energy and fit the 'drone night flight' aesthetic.",
+      "cards": "Use #111111 for cards/sections with a 1px border of #27272A.",
+      "cta": "Buttons must be #FF5500 (Electric Orange) with White text. Hover state: Brighten to #FF7733.",
+      "text_contrast": "Ensure white text on dark backgrounds. Use #A1A1AA for secondary text."
+    }
+  },
+  "layout": {
+    "structure": "Single Page Application (SPA) with Anchor Navigation",
+    "container_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "spacing": {
+      "section_padding": "py-20 md:py-32",
+      "element_gap": "gap-8"
+    },
+    "navigation": {
+      "style": "Fixed/Sticky Glassmorphism",
+      "layout": "Logo (Left) | Links (Center) | Social Icons (Right)",
+      "logo_size": "80x70px",
+      "mobile": "Hamburger menu with full-screen dark overlay"
+    }
+  },
+  "components": {
+    "header": {
+      "logo_container": "Flex container, logo image 80x70px.",
+      "nav_links": ["Home", "Services", "Product", "Contact"],
+      "social_icons": {
+        "linkedin": "FaLinkedin",
+        "github": "FaGithub",
+        "position": "Right aligned"
+      }
+    },
+    "hero_section": {
+      "id": "home",
+      "style": "Full viewport height (min-h-screen). Flex center.",
+      "typography": "Huge ByteBounce font (text-6xl md:text-8xl).",
+      "content": "Welcome message about aerial automation startup.",
+      "background": "Dark gradient overlay on drone imagery."
+    },
+    "services_section": {
+      "id": "services",
+      "layout": "Bento Grid (Grid-cols-1 md:grid-cols-3)",
+      "card_style": "Dark bg (#111), subtle orange border on hover, icon top-left."
+    },
+    "product_section": {
+      "id": "product",
+      "style": "Terminal/Code Editor aesthetic.",
+      "content": "Display GitHub repo 'AIR.01.001' details.",
+      "visuals": "Monospace font for code snippets, green/orange syntax highlighting."
+    },
+    "contact_section": {
+      "id": "contact",
+      "form_style": "Minimalist inputs, transparent bg with bottom border only.",
+      "button": "Full width orange button."
+    },
+    "footer": {
+      "style": "Waving Animation top border.",
+      "content": "Social links, email, copyright.",
+      "animation_css": "Use SVG path with CSS keyframes for 'wave' effect."
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "Hero/Drone",
+        "url": "https://images.unsplash.com/photo-1521810794802-50135d944e8f",
+        "alt": "Drone close up shallow focus"
+      },
+      {
+        "category": "Tech/Coding",
+        "url": "https://images.unsplash.com/photo-1667207763306-6d3c0939a827",
+        "alt": "Developer working on code"
+      }
+    ],
+    "icons": {
+      "library": "react-icons/fa (FontAwesome)",
+      "loading_strategy": "Import specific icons only to ensure fast loading."
+    }
+  },
+  "technical_requirements": {
+    "pwa": {
+      "features": ["Service Worker", "Offline Support", "Cache First Strategy"],
+      "implementation": "Use vite-plugin-pwa or manual service worker registration."
+    },
+    "seo": {
+      "keywords": ["Integricate", "UAS", "Drone Programming", "Aerial Automation", "AIR.01.001"],
+      "meta_tags": "Ensure description and title are dynamic."
+    },
+    "performance": {
+      "images": "Use webp format where possible, lazy load below fold.",
+      "scroll": "Lenis for smooth scrolling effect."
+    }
+  },
+  "universal_guidelines": [
+    "Do not use gradients for main backgrounds, use solid dark colors (#050505).",
+    "Use Electric Orange (#FF5500) strictly for interactive elements and highlights.",
+    "Ensure 80x70px logo constraint is respected.",
+    "ByteBounce font MUST be used on Home section text only.",
+    "Waving footer must be smooth and continuous.",
+    "All interactive elements must have data-testid attributes."
+  ],
+  "instructions_to_main_agent": "1. Set up React with Vite and Tailwind.\n2. Install 'sass' if needed for complex wave animations, or use pure CSS.\n3. Create a 'components/layout/Navbar.jsx' that handles the anchor scrolling.\n4. Implement the 'WavingFooter' component using SVG paths.\n5. Use the provided image URLs for background/hero sections.\n6. Ensure the Service Worker is registered in main.jsx/index.js."
+}
