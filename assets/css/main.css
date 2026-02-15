@@ -1,0 +1,96 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    border: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    display: block;
+    background-color: rgb(30, 29, 29);
+}
+
+.header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-left {
+    height: 80px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-logo {
+    height: 70px;
+    width: 70px;
+    background-image: url("../images/integricate.svg");
+    background-size: cover;
+}
+
+.header-middle {
+    height: 80px;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    padding: 0px 10px 0px 15px;
+    font-weight: 550;
+    text-decoration: none;
+    color: rgb(201, 217, 232);
+    font-family: serif;
+}
+
+.header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 3%;
+}
+
+
+#nav-links {
+    font-size: 28px;
+    color: aliceblue;
+    font-weight: 500;
+    padding: 0px 5px 0px 5px;
+}
+
+.custom-shape-divider-top-1771161956 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1771161956 svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 54px;
+}
+
+.custom-shape-divider-top-1771161956 .shape-fill {
+    fill: #1E1D1D;
+}
