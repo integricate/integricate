@@ -1,0 +1,9 @@
+{
+  "short_name": "Integricate",
+  "name": "Integricate - Unmanned Aerial System Solutions",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FF5500",
+  "background_color": "#050505",
+  "description": "Integricate - Revolutionizing automation in aerial vehicles and UAS programming solutions."
+}
