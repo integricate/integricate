@@ -1,9 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 from motor.motor_asyncio import AsyncIOMotorClient
 from datetime import datetime, timezone
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
 
 app = FastAPI(title="Integricate API", version="1.0.0")
 
