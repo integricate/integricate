@@ -28,7 +28,7 @@ header {
     height: 80px;
     width: 50%;
     display: flex;
-    justify-content:left;
+    justify-content:center;
     align-items: center;
     padding-left: 20px;
 }
@@ -46,7 +46,7 @@ header {
     height: 80px;
     width: 50%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 }
 
